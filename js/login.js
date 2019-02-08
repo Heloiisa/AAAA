@@ -1,0 +1,3 @@
+vmLogin = new Vue({
+    
+});

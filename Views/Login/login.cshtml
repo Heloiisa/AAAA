@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div id="login">
+  <navbarinternal></navbarinternal>
+    <div class="columns">
+      <div class="column space">
+        <div id="loginfield" class="column is-10-mobile is-offset-1-mobile is-5-desktop is-7-tablet is-offset-2-tablet is-offset-6-desktop"> <img id="logo" src="~/images/logo.jpeg"
+            height="30%" alt="">
+          <h3 class="subtitle"><b>Seja bem vindo!</b></h3>
+          <p>Realize a verificação do certificado digital para continuar</p>
+          <form> 
+            <!-- <button v-on:click="modal = !modal" class="button is-info is-medium is-fullwidth justifyflexstart"> VERIFICAR CERTIFICADO DIGITAL</button> -->
+            <a href="https://ieptb-centralduplicata.azurewebsites.net/certificado" class="button is-info is-medium is-fullwidth justifyflexstart"> VERIFICAR CERTIFICADO DIGITAL </a>
+          </form>
+        </div>
+      </div>
+      <div class="column is-hidden-mobile p0">
+        <div class="black">
+          <div class="dflex2" id="bg">
+            <div id="criarconta" class="has-text-left column is-8">
+              <p class="is-size-7">Ainda não é cliente?</p>
+              <p class="is-size-3 has-text-weight-bold">Abra sua conta e opere com a corretagem mais barata do Brasil.</p>
+               <a href="/cadastro" class="button is-info is-medium has-text-left"> Criar minha conta </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--<div v-if="modal" class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Certificados</p>
+          <button v-on:click="modal = !modal" class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <ul>
+            <li v-for="c in certificates"> {{c.subjectName}}</li>
+          </ul>
+        </section>
+        <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer>
+      </div>
+    </div>
+</div>-->

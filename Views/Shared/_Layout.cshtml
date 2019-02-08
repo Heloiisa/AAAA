@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - IEPTB</title>
+  <link rel="stylesheet" href="~/css/site.css"/>
+  <script type="text/javascript" src="https://get.webpkiplugin.com/Scripts/LacunaWebPKI/lacuna-web-pki-2.11.0.js"
+  integrity="sha256-UE+cv2P2Hsw+GG5jfCUMxV8ZjCDucM4sZXfPqlEc7C0="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var pki = new LacunaWebPKI();
+  </script>
+</head>
+
+<body>
+  <main role="main" class="">
+    @RenderBody()
+  </main>
+
+<!-- <div id="main">
+   
+</div> -->
+
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @RenderSection("Scripts", required: false)
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+  });
+</script>
+
+<script>
+    let dropdown = document.querySelector('.dropdown');
+  dropdown.addEventListener('click', function(event) {
+      event.stopPropagation();
+      dropdown.classList.toggle('is-active');
+  });
+</script>
+
+</html>
